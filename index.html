@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website Empire (Bigest Empire)</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+	<div class="topnav" id="myTopnav">
+		<h1>Csiszér Csongor</h1>
+		<a href="#home" class="active">Home</a>
+		<a href="https://github.com/CsongorCsiszer/SAGVARI" target="_blank">Github</a>
+		<a href="codes.html">Codes</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		  <i class="fa fa-bars"></i>
+		</a>
+	  </div>
+    <div id="heading">
+    </div>
+
+    <div class="slider" id="main-slider"><!-- outermost container element -->
+        <div class="slider-wrapper"><!-- innermost wrapper element -->
+            <img src="img1.jpg" alt="First" class="slide" /><!-- slides -->
+            <img src="img2.jpg" alt="Second" class="slide" />
+            <img src="img3.jpg" alt="Third" class="slide" />
+        </div>
+    </div>	
+
+	<div class="tartalom">
+		<img src="97903740.png" id="me">
+		<div class="intro">
+			<h2>Én</h2>
+			<p >Nem fogok esszét írni magamról.</p>
+		</div>
+
+	</div>
+
+</body>
+<script>
+	(function() {
+
+function Slideshow( element ) {
+	this.el = document.querySelector( element );
+	this.init();
+}
+
+Slideshow.prototype = {
+	init: function() {
+		this.wrapper = this.el.querySelector( ".slider-wrapper" );
+		this.slides = this.el.querySelectorAll( ".slide" );
+		this.previous = this.el.querySelector( ".slider-previous" );
+		this.next = this.el.querySelector( ".slider-next" );
+		this.index = 0;
+		this.total = this.slides.length;
+		this.timer = null;
+		
+		this.action();
+		this.stopStart();	
+	},
+	_slideTo: function( slide ) {
+		var currentSlide = this.slides[slide];
+		currentSlide.style.opacity = 1;
+		
+		for( var i = 0; i < this.slides.length; i++ ) {
+			var slide = this.slides[i];
+			if( slide !== currentSlide ) {
+				slide.style.opacity = 0;
+			}
+		}
+	},
+	action: function() {
+		var self = this;
+		self.timer = setInterval(function() {
+			self.index++;
+			if( self.index == self.slides.length ) {
+				self.index = 0;
+			}
+			self._slideTo( self.index );
+			
+		}, 3000);
+	},
+	stopStart: function() {
+		var self = this;
+		self.el.addEventListener( "mouseover", function() {
+			clearInterval( self.timer );
+			self.timer = null;
+			
+		}, false);
+		self.el.addEventListener( "mouseout", function() {
+			self.action();
+			
+		}, false);
+	}
+	
+	
+};
+
+document.addEventListener( "DOMContentLoaded", function() {
+	
+	var slider = new Slideshow( "#main-slider" );
+	
+});
+
+
+})();
+
+
+
+</script>
+</html>

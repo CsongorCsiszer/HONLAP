@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+		<h1>Csiszér Csongor</h1>
+		<a href="index.html">Home</a>
+		<a href="https://github.com/CsongorCsiszer/SAGVARI" target="_blank">Github</a>
+		<a href="codes.html" class="active">Codes</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		  <i class="fa fa-bars"></i>
+		</a>
+	  </div>
+    <div id="heading">
+    </div>
+
+    <!--Robot-->
+    <button class="accordion">Robot</button>
+    <div class="panel">
+        bemenet = input("Kérem a robot parancsait: ") <br>
+        kimenet = "" <br>
+        
+        E = 0 <br>
+        D = 0 <br>
+        N = 0 <br>
+        K = 0 <br>
+        <br>
+        for i in bemenet: <br>
+            if i == 'E': <br>
+                E= E + 1 <br>
+                <br>
+        for i in bemenet: <br>
+            if i == 'D': <br>
+                D= D + 1 <br>
+                <br>
+        for i in bemenet: <br> 
+            if i == 'N': <br>
+                N= N + 1 <br>
+                <br>
+        for i in bemenet: <br>
+            if i == 'K': <br>
+                K= K + 1 <br>
+                <br>
+        print("E betűk száma:  ", E) <br>
+        print("D betűk száma:  ", D) <br>
+        print("K betűk száma:  ", K) <br>
+        print("N betűk száma:  ", N) <br>
+        <br>
+        x = K - N <br>
+        y = E - D <br>
+        <br>
+        for i in range(abs(y)): <br>
+            if y > 0: <br>
+                kimenet += "E" <br>
+                y -= 1 <br>
+            if y < 0: <br>
+                kimenet += "D" <br>
+                y += 1 <br>
+                <br>
+        for i in range(abs(x)): <br>
+            if x > 0: <br>
+                kimenet += "K" <br>
+                x -= 1 <br>
+            if x < 0: <br>
+                kimenet += "N" <br>
+                x += 1 <br>
+                <br>
+        print(kimenet) <br>
+        <br>
+    </div>
+
+</body>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+} 
+</script>
+</html>
