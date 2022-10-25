@@ -29,14 +29,32 @@
         </div>
     </div>	
 
-	<div class="tartalom">
-		<img src="97903740.png" id="me">
-		<div class="intro">
-			<h2>Én</h2>
-			<p >Nem fogok esszét írni magamról.</p>
-		</div>
 
-	</div>
+	<table id="maintable">
+		 <tr>
+			 <td id="table1">
+				 <table>
+					<tr><h2>Játékok</h2></tr>
+					<tr class="games">
+						 <td class="game" onclick="window.open('fejecske/fejecske.html')">Fejecske játék</td>
+				 	</tr>
+				 	<tr class="games">
+						 <td class="game" onclick="window.open('szamvizsgalat/szamvizsgalat.html')">Számvizsgálat</td>
+				 	</tr>
+				 </table>
+
+			 </td>
+			 <td>
+			 </td>
+			 <td>
+				<img src="97903740.png" id="me">
+			 </td>
+			 <td id="intro">
+				<h2>Én</h2>
+				<p>Nem fogok esszét írni magamról.</p>
+			 </td>
+		 </tr>
+	</table>
 
 </body>
 <script>
@@ -80,7 +98,7 @@ Slideshow.prototype = {
 			}
 			self._slideTo( self.index );
 			
-		}, 3000);
+		}, 2000);
 	},
 	stopStart: function() {
 		var self = this;
