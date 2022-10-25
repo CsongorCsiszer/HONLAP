@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <h1>Csiszér Csongor</h1>
+    <a href="../index.html">Home</a>
+    <a href="https://github.com/CsongorCsiszer/SAGVARI" target="_blank">Github</a>
+    <a href="codes.html">Codes</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+    </div>
+<h2>Számvizsgálat</h2>
+    <form name="urlap">
+        <input type="text" name="beszam">
+        <input type="button" value="Számvizsgálat" onclick="vizsgal()">
+    </form>
+    <p>Paritás: <span id="paritas">?</span></p>
+    <p>Osztók száma: <span id="osztokszama">?</span></p>
+    <p>Prim szam: <span id="prim">?</span></p>
+    <p>Negyzetszam: <span id="negyzetszam">?</span></p>
+</body> 
+<script>
+function check() {
+    let x = Number(document.form["urlap"]);
+    if (x % 2 == 0) {
+        document.getElementId("eredmeny").innerhtml="páros";
+    }
+    else {
+        document.getElementId("eredmeny").innerHtml='páratlan';
+    }
+}
+
+function vizsgal() {        
+        let a = Number(document.forms["urlap"]["beszam"].value);
+        if (a % 2 == 0)
+        {
+            document.getElementById('paritas').innerHTML = 'Páros';
+        }
+        else
+        {
+            document.getElementById('paritas').innerHTML = 'Páratlan';
+        }
+        document.getElementById('osztokszama').innerHTML = osztokszama(a);
+        document.getElementById('prim').innerHTML = prim(a);
+        document.getElementById('negyzetszam').innerHTML = negyzetszam(a);
+        
+    }
+
+function osztokszama(n) {
+    let db = 0;
+    for(let i = 0; i <= n; i++) {
+        if (n % i == 0) {
+            db++;
+        }
+    }
+    return db;
+}
+
+function prim(n) {
+    let valasz = "nem prim"
+    if (osztokszama(n) == 2) {
+        valasz = "prim";
+    }
+    return valasz;
+}
+
+function negyzetszam(n) 
+{
+    let segitovaltozojobarat = 1;
+    let osszeg = 1;
+    while(osszeg < n) {
+        segitovaltozojobarat = segitovaltozojobarat + 2;
+        osszeg = osszeg + segitovaltozojobarat;
+    }
+    if(osszeg == n) {
+        return "igen";
+    }
+    else {
+        return "nem";
+    }
+}
+
+</script>
+</html>
