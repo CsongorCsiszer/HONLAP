@@ -159,3 +159,45 @@ html,body {
 	box-shadow:black;
 	cursor:pointer;
 }
+
+.b {
+	width: 40px;
+	height: 30px;
+	background-color: lightblue;
+	border-radius: 1rem;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	box-shadow: 3px 3px 3px 3px gray;
+}
+
+.p {
+	width: 40px;
+	height: 30px;;
+	background-color: lightcoral;
+	border-radius: 1rem;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	box-shadow: 3px 3px 3px 3px gray;
+}
+
+.p:hover {
+	background-color: rgb(117, 34, 34);
+}
+
+.y {
+	height: 30px;;
+	background-color: yellow;
+	border-radius: 10rem;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	box-shadow: 3px 3px 3px 3px gray;
+}
+
+

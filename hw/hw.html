@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Házi</title>
+    <link rel="stylesheet" href="../styles.css">
+
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+		<h1>Csiszér Csongor</h1>
+		<a href="../index.html">Home</a>
+		<a href="https://github.com/CsongorCsiszer/SAGVARI" target="_blank">Github</a>
+		<a href="../codes.html">Codes</a>
+		<a href="hw/hw.html" class="active">Házi</a>
+	</div>
+
+    <button class="accordion">Házi 1</button>
+    <div class="panel">
+        <div id="hw1">
+            <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="b">1</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="b">2</td>
+                    <td class="p"></td>
+                    <td class="b">3</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="b">4</td>
+                    <td class="p"></td>
+                    <td class="y"></td>
+                    <td class="p"></td>
+                    <td class="b">5</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="b">6</td>
+                    <td class="p"></td>
+                    <td class="b">7</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="b">8</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="b">A</td>
+                    <td class="b">9</td>
+                    <td class="b">B</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="b">C</td>
+                    <td></td>
+                    <td class="b">D</td>
+                    <td></td>
+                    <td class="b">E</td>
+                </tr>
+                <tr>
+                    <td class="p"></td>
+                    <td></td>
+                    <td class="p"></td>
+                    <td></td>
+                    <td class="p"></td>
+                </tr>
+                <tr>
+                    <td class="y"></td>
+                    <td></td>
+                    <td class="y"></td>
+                    <td></td>
+                    <td class="y"></td>
+                </tr>
+        
+        
+            </table>    
+        </div>
+    </div>
+
+    
+
+</body>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+} 
+</script>
+</html>
